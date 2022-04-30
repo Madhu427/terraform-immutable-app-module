@@ -1,6 +1,6 @@
 data "aws_ami" "ami" {
   most_recent      = true
-  name_regex       = "base-with-ansible"
+  name_regex       = "${var.COMPONENT}-${var.APP_VERSION}}"
   owners           = ["self"]
   }
 
@@ -17,7 +17,7 @@ data "terraform_remote_state" "alb" {
   backend = "s3"
   config = {
     bucket = "tf-bucket-61"
-    key    = "mutable/alb/${var.ENV}/terraform.tfstate"
+    key    = "immutable/alb/${var.ENV}/terraform.tfstate"
     region = "us-east-1"
   }
 }
