@@ -2,7 +2,7 @@ data "aws_ami" "ami" {
   most_recent      = true
   name_regex       = "${var.COMPONENT}-${var.APP_VERSION}}"
   owners           = ["self"]
-  }
+}
 
 data "terraform_remote_state" "vpc" {
   backend = "s3"
