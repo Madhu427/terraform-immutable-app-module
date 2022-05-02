@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "asg" {
-  name                      = "${var.COMPONENT}-${var.APP_VERSION}"
+  name                      = "${var.COMPONENT}-${var.ENV}"
   max_size                  = var.MAX_SIZE
   min_size                  = var.MIN_SIZE
 
