@@ -11,7 +11,7 @@ resource "aws_launch_template" "launch-template" {
     }
   }
 
-  instance_type = "var.INSTANCE_TYPE"
+  instance_type = var.INSTANCE_TYPE
   vpc_security_group_ids = [aws_security_group.sg.id]
 
   tag_specifications {
