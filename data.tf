@@ -4,6 +4,10 @@ data "aws_ami" "ami" {
   owners           = ["self"]
 }
 
+output "AMI_OUTPUT" {
+   value = data.aws_ami.ami.id
+}
+
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
