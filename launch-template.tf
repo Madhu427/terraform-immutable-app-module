@@ -1,6 +1,6 @@
 resource "aws_launch_template" "launch-template" {
   name = "${var.COMPONENT}-${var.ENV}"
-  image_id = "data.aws_ami.ami.id"
+  image_id = data.aws_ami.ami.id
 
   instance_market_options {
     market_type = "spot"
