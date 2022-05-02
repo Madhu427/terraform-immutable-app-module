@@ -5,8 +5,9 @@ resource "aws_launch_template" "launch-template" {
   instance_market_options {
     market_type = "spot"
     spot_options {
-      instance_interruption_behavior = "stop"
-      spot_instance_type = "persistent"
+#      instance_interruption_behavior = "stop"
+#      spot_instance_type = "persistent"
+      spot_instance_type = "one-time"
     }
   }
 
