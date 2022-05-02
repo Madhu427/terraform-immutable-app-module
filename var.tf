@@ -13,5 +13,5 @@ variable "LB_PRIVATE" {
 variable "LB_RULE_PRIORITY" {}
 variable "MAX_SIZE" {}
 variable "MIN_SIZE" {}
-variable "AMI_OUTPUT" {}
+
 
